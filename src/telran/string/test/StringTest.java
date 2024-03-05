@@ -10,6 +10,7 @@ class StringTest {
 	@Test
 	@DisplayName("test of the method concat")
 	void concatTest() {
+		//Comment
 		String hello = "Hello";
 		assertEquals("Hello World!!!", hello.concat(" World").concat("!!!"));
 	}
