@@ -10,12 +10,8 @@ class StringTest {
 	@Test
 	@DisplayName("test of the method concat")
 	void concatTest() {
-//		fail("Not yet implemented");
 		String hello = "Hello";
-		hello = hello.concat(" World"); // That way is a link created to a new string
-		assertEquals("Hello World!!!", hello.concat("!!!"));
-//		String hello = "Hello";
-//		assertEquals("Hello World", hello.concat(" World"));
+		assertEquals("Hello World!!!", hello.concat(" World").concat("!!!"));
 	}
 	
 	@Test
