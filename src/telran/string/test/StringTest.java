@@ -10,7 +10,6 @@ class StringTest {
 	@Test
 	@DisplayName("test of the method concat")
 	void concatTest() {
-		//Comment
 		String hello = "Hello";
 		assertEquals("Hello World!!!", hello.concat(" World").concat("!!!"));
 	}
@@ -20,6 +19,13 @@ class StringTest {
 		String hello = "Hello";
 		assertTrue(hello.contains("ell"));
 		assertFalse(hello.contains("elo"));
+	}
+	
+	@Test
+	void compareToTest() {
+		String hello = "Hello";
+		assertEquals(0, hello.compareTo("Hello"));
+//		assertEquals(, hello.compareTo("helo"));
 	}
 
 }
