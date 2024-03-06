@@ -25,7 +25,37 @@ class StringTest {
 	void compareToTest() {
 		String hello = "Hello";
 		assertEquals(0, hello.compareTo("Hello"));
-//		assertEquals(, hello.compareTo("helo"));
+		assertTrue(hello.compareTo("hello") < 0);
+		assertTrue(hello.compareTo("HELLO") > 0);
+	}
+	
+	@Test
+	void compareToIgnoreCaseTest() {
+		String hello = "Hello";
+		assertEquals(0, hello.compareToIgnoreCase("hello"));
+		assertTrue(hello.compareToIgnoreCase("helloo") < 0);
+		assertTrue(hello.compareToIgnoreCase("HE") > 0);
+	}
+	
+	@Test
+	void startsWithTest() {
+		String hello = "Hello";
+		assertTrue(hello.startsWith("He"));
+		assertFalse(hello.startsWith("l"));
+	}
+	
+	@Test
+	void equalsIgnoreCaseTest() {
+		String hello = "Hello";
+		assertTrue(hello.equalsIgnoreCase("Hello"));
+		assertFalse(hello.equalsIgnoreCase("helloO"));
+	}
+	
+	@Test
+	void lastIndexOfTest() {
+		String hello = "Hello World!";
+		assertTrue(hello.lastIndexOf("e") == 1);
+		assertFalse(hello.indexOf("d") == 6);
 	}
 
 }
